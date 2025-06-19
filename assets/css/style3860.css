@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700,300,100);
+@size-cube: 210px;
+@faces-interval: (@size-cube/2)/5;
+@size-dot: 2px;
+@delay-anim: .3s;
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
@@ -10,6 +16,109 @@ Typography
   border: none;
 }
 
+
+
+
+ .right-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .flip-card2 {
+      background-color: transparent;
+      width: 200px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .flip-card2-inner {
+      position: relative;
+      width: 100%;
+      height: 100%!important;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card2:hover .flip-card2-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card2-front, .flip-card2-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .flip-card2-front {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .flip-card2-back {
+  background: #a61916;
+
+      color: #333;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .flip-card2-front::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .flip-card2-front span {
+      position: relative;
+      z-index: 1;
+    }
+.box{
+  color: white;
+}
+
+ 
+   .wrap {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      animation: rotate 14s infinite linear;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotateY(360deg) rotateX(360deg);
+      }
+    }
+
+    .c {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      opacity: 0;
+    }
 
 
 .services-section {
@@ -53,7 +162,7 @@ Typography
 }
 
 .service-card:hover {
-  background: #e42320;
+  background: #a61916;
   color: #fff;
   transform: translateY(-10px);
   border-top: 5px solid #000000;
@@ -224,11 +333,11 @@ Typography
   padding: 20px;
   backface-visibility: hidden;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  color: rgb(94, 63, 63);
+  color: rgb(243, 243, 243);
 }
 
 .flip-card-front {
-  background: linear-gradient(to right, #c7c7c7,);
+  background: linear-gradient(to right, #efeeee,);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,11 +350,12 @@ Typography
 }
 
 .flip-card-back {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right,#134a81, #134a81);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: white;
 }
 
 .flip-card-back h4 {
@@ -253,20 +363,20 @@ Typography
 }
 
 .flip-card-back a {
-  background-color: #000000;
+  background-color: #ffffff;
   color: #0072ff;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
-
+ss
 .span{
   margin-top: 20px;
 }
 
 .flipp{
-  color: #000;
+  color: #fffefe;
 }
 
 
@@ -2335,7 +2445,7 @@ header .about-header .header-item .header-menu .primary-menu .main-menu-area ul.
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right, #5146ae, #25a6e4);
+  /* background: linear-gradient(to right, #5146ae, #25a6e4); */
 }
 
 @media (max-width: 991px) {
@@ -2486,7 +2596,8 @@ header .about-header .header-item .header-menu .primary-menu .main-menu-area ul.
 
 .app-banner.style-1 {
   overflow: hidden;
-  background: linear-gradient(to right, #000000, #16064f);
+  background-color:#171e22 ;
+  
 }
 
 .app-banner.style-1::after {
@@ -11102,11 +11213,12 @@ ul.countdown-list li small {
 
 .bg-email{
 /*  background: url('../images/banner/bg-email.jpg');*/
-  background: url('../images/Homeimage/8491cb8d11.jpg');
+  /* background: url('../images/Homeimage/8491cb8d11.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  
 }
 /*.mb-0{
   margin-bottom: 0px!important;
