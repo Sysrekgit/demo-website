@@ -30,11 +30,12 @@ Typography
   width: 300px;
   transition: all 0.3s ease;
   border-top: 5px solid transparent;
+  height: 280px;
 }
 
 .service-card .icon img {
   width: 50px;
-  height: 50px;
+  height: 40px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
@@ -68,7 +69,10 @@ Typography
   color: #fff;
 }
 
-
+.icon-services{
+  font-size: 35px!important;
+  color: #000000;
+}
 
 .carousel-section {
   padding: 60px 30px;
